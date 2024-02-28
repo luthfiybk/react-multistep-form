@@ -15,7 +15,7 @@ export class Confirm extends Component {
     };
     console.log(formData);
     try {
-      const response  = await axios.post('http://localhost:4000/api/form', formData);
+      const response  = await axios.post('be-form-production.up.railway.app/api/form', formData);
       if(response.status === 201) {
         this.props.nextStep();
       }
