@@ -5,14 +5,26 @@ import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 
-export class FormUserDetails extends Component {
+export class NamaLengkap extends Component {
+  state = {
+    error: false
+  }
+
   continue = e => {
     e.preventDefault();
-    this.props.nextStep();
+    if(this.props.values.nama_lengkap.trim() !== '') {
+      this.props.nextStep();
+    } else {
+      this.setState({
+        error: true
+      })
+      alert('Nama lengkap tidak boleh kosong!');
+    }
   };
 
   render() {
     const { values, handleChange } = this.props;
+    const { error } = this.state
     return (
       <MuiThemeProvider>
         <>
@@ -21,32 +33,16 @@ export class FormUserDetails extends Component {
             fullWidth
             maxWidth='sm'
           >
-            <AppBar title="Enter User Details" />
+            <AppBar title="Masukkan Nama Lengkap Anda" />
             <TextField
-              placeholder="Enter Your First Name"
-              label="First Name"
-              onChange={handleChange('firstName')}
-              defaultValue={values.firstName}
+              placeholder="Masukkan Nama Lengkap Anda"
+              label="Nama Lengkap"
+              onChange={handleChange('nama_lengkap')}
+              defaultValue={values.nama_lengkap}
               margin="normal"
               fullWidth
-            />
-            <br />
-            <TextField
-              placeholder="Enter Your Last Name"
-              label="Last Name"
-              onChange={handleChange('lastName')}
-              defaultValue={values.lastName}
-              margin="normal"
-              fullWidth
-            />
-            <br />
-            <TextField
-              placeholder="Enter Your Email"
-              label="Email"
-              onChange={handleChange('email')}
-              defaultValue={values.email}
-              margin="normal"
-              fullWidth
+              error={error}
+              helperText={error ? 'Nama Lengkap harus diisi' : ''}
             />
             <br />
             <Button
@@ -61,4 +57,4 @@ export class FormUserDetails extends Component {
   }
 }
 
-export default FormUserDetails;
+export default NamaLengkap;

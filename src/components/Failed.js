@@ -3,7 +3,7 @@ import Dialog from '@material-ui/core/Dialog';
 import AppBar from '@material-ui/core/AppBar';
 import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
 
-export class Success extends Component {
+export class Failed extends Component {
   render() {
     return (
       <MuiThemeProvider>
@@ -13,9 +13,9 @@ export class Success extends Component {
             fullWidth
             maxWidth='sm'
           >
-            <AppBar title="Success" />
-            <h1 style={{ textAlign: 'center' }}>YEY, Thank you yaa</h1>
-            <p style={{ marginTop: '0px', textAlign: 'center' }}>I will contact you ASAP!!! &#128521;</p>
+            <AppBar title="Failed" />
+            <h1 style={{ textAlign: 'center'}}>Poor me &#128549;</h1>
+            <p style={{ marginTop: '0px', textAlign: 'center' }}>Thank you yaa udah ngeluangin waktunya buat ngisi formnya wkwkw</p>
           </Dialog>
         </>
       </MuiThemeProvider>
@@ -23,4 +23,4 @@ export class Success extends Component {
   }
 }
 
-export default Success;
+export default Failed;
