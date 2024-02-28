@@ -15,7 +15,7 @@ export class Failed extends Component {
           >
             <AppBar title="Failed" />
             <h1 style={{ textAlign: 'center'}}>Poor me &#128549;</h1>
-            <p style={{ marginTop: '0px', textAlign: 'center' }}>Thank you yaa udah ngeluangin waktunya buat ngisi formnya wkwkw</p>
+            <p style={{ marginTop: '0px', textAlign: 'center' }}>Thank you yaa udah ngeluangin waktunya buat ngisi formnya wkwkw, sorry nadd</p>
           </Dialog>
         </>
       </MuiThemeProvider>
