@@ -44,11 +44,11 @@ export class Confirm extends Component {
             <br />
 
             <Button color="secondary" variant="contained" onClick={this.targetStep}>
-              GAMAU &#128544;
+              GABOLEH &#128544;
             </Button>
 
             <Button color="primary" variant="contained" onClick={this.continue}>
-              MAU &#128517;
+              BOLEH &#128517;
             </Button>
           </Dialog>
         </>
